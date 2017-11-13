@@ -1,0 +1,120 @@
+<http://example.org/bot_test> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://example.org/bot_test> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
+<http://example.org/bot_test> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> .
+<http://example.org/bot_test> <http://purl.org/dc/elements/1.1/description> "Example showing how the BOT ontology can be used to describe the topology of a building.\nThe building has four external walls and consists of 2 storeys. In the first storey there are rooms 101 and 102. In the second storey there is room 201.\nRoom 101 has an entrance door, one window and a table.\nRoom 102 has a window and a sofa.\nA door connects room 101 and room 102.\nA trapdoor connects room 102 and room 201." .
+<http://example.org/bot_test> <http://purl.org/dc/terms/creator> <http://www.terkaj.com#walter> .
+<http://example.org/bot_test> <http://purl.org/dc/terms/issued> "2017-04-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://example.org/bot_test> <http://purl.org/dc/terms/modified> "2017-04-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://example.org/bot_test#BuildingTest
+<http://example.org/bot_test#BuildingTest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#BuildingTest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Building> .
+<http://example.org/bot_test#BuildingTest> <https://w3id.org/bot#hasStorey> <http://example.org/bot_test#Storey1> .
+<http://example.org/bot_test#BuildingTest> <https://w3id.org/bot#hasStorey> <http://example.org/bot_test#Storey2> .
+# 
+# http://example.org/bot_test#Room101
+<http://example.org/bot_test#Room101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#Room101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Space> .
+<http://example.org/bot_test#Room101> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#door_101_102> .
+<http://example.org/bot_test#Room101> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#door_entrance> .
+<http://example.org/bot_test#Room101> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#wall_101_102> .
+<http://example.org/bot_test#Room101> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#wall_external_N> .
+<http://example.org/bot_test#Room101> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#wall_external_S> .
+<http://example.org/bot_test#Room101> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#wall_external_W> .
+<http://example.org/bot_test#Room101> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#window101> .
+<http://example.org/bot_test#Room101> <https://w3id.org/bot#containsElement> <http://example.org/bot_test#table_101> .
+# 
+# http://example.org/bot_test#Room102
+<http://example.org/bot_test#Room102> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#Room102> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Space> .
+<http://example.org/bot_test#Room102> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#door_101_102> .
+<http://example.org/bot_test#Room102> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#trapdoor_102_201> .
+<http://example.org/bot_test#Room102> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#wall_101_102> .
+<http://example.org/bot_test#Room102> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#wall_external_E> .
+<http://example.org/bot_test#Room102> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#wall_external_N> .
+<http://example.org/bot_test#Room102> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#wall_external_S> .
+<http://example.org/bot_test#Room102> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#window102> .
+<http://example.org/bot_test#Room102> <https://w3id.org/bot#containsElement> <http://example.org/bot_test#sofa_102> .
+# 
+# http://example.org/bot_test#Room201
+<http://example.org/bot_test#Room201> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#Room201> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Space> .
+<http://example.org/bot_test#Room201> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#trapdoor_102_201> .
+<http://example.org/bot_test#Room201> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#wall_external_E> .
+<http://example.org/bot_test#Room201> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#wall_external_N> .
+<http://example.org/bot_test#Room201> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#wall_external_S> .
+<http://example.org/bot_test#Room201> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#wall_external_W> .
+<http://example.org/bot_test#Room201> <https://w3id.org/bot#adjacentElement> <http://example.org/bot_test#window201> .
+# 
+# http://example.org/bot_test#Storey1
+<http://example.org/bot_test#Storey1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#Storey1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Storey> .
+<http://example.org/bot_test#Storey1> <https://w3id.org/bot#hasSpace> <http://example.org/bot_test#Room101> .
+<http://example.org/bot_test#Storey1> <https://w3id.org/bot#hasSpace> <http://example.org/bot_test#Room102> .
+# 
+# http://example.org/bot_test#Storey2
+<http://example.org/bot_test#Storey2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#Storey2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Storey> .
+<http://example.org/bot_test#Storey2> <https://w3id.org/bot#hasSpace> <http://example.org/bot_test#Room201> .
+# 
+# http://example.org/bot_test#door_101_102
+<http://example.org/bot_test#door_101_102> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#door_101_102> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Element> .
+# 
+# http://example.org/bot_test#door_entrance
+<http://example.org/bot_test#door_entrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#door_entrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Element> .
+# 
+# http://example.org/bot_test#sofa_102
+<http://example.org/bot_test#sofa_102> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#sofa_102> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Element> .
+# 
+# http://example.org/bot_test#table_101
+<http://example.org/bot_test#table_101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#table_101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Element> .
+# 
+# http://example.org/bot_test#trapdoor_102_201
+<http://example.org/bot_test#trapdoor_102_201> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#trapdoor_102_201> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Element> .
+# 
+# http://example.org/bot_test#wall_101_102
+<http://example.org/bot_test#wall_101_102> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#wall_101_102> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Element> .
+# 
+# http://example.org/bot_test#wall_external_E
+<http://example.org/bot_test#wall_external_E> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#wall_external_E> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Element> .
+# 
+# http://example.org/bot_test#wall_external_N
+<http://example.org/bot_test#wall_external_N> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#wall_external_N> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Element> .
+# 
+# http://example.org/bot_test#wall_external_S
+<http://example.org/bot_test#wall_external_S> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#wall_external_S> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Element> .
+# 
+# http://example.org/bot_test#wall_external_W
+<http://example.org/bot_test#wall_external_W> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#wall_external_W> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Element> .
+# 
+# http://example.org/bot_test#window101
+<http://example.org/bot_test#window101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#window101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Element> .
+# 
+# http://example.org/bot_test#window102
+<http://example.org/bot_test#window102> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#window102> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Element> .
+# 
+# http://example.org/bot_test#window201
+<http://example.org/bot_test#window201> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/bot_test#window201> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/bot#Element> .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

@@ -1,0 +1,148 @@
+@prefix : <http://example.org/bot_test#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/bot_test> .
+
+<http://example.org/bot_test> rdf:type owl:Ontology ;
+                               owl:imports <https://w3id.org/bot> ;
+                               <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> ;
+                               <http://purl.org/dc/elements/1.1/description> """Example showing how the BOT ontology can be used to describe the topology of a building.
+The building has four external walls and consists of 2 storeys. In the first storey there are rooms 101 and 102. In the second storey there is room 201.
+Room 101 has an entrance door, one window and a table.
+Room 102 has a window and a sofa.
+A door connects room 101 and room 102.
+A trapdoor connects room 102 and room 201."""^^xsd:string ;
+                               <http://purl.org/dc/terms/creator> <http://www.terkaj.com#walter> ;
+                               <http://purl.org/dc/terms/issued> "2017-04-05"^^xsd:date ;
+                               <http://purl.org/dc/terms/modified> "2017-04-05"^^xsd:date .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/bot_test#BuildingTest
+:BuildingTest rdf:type owl:NamedIndividual ,
+                       <https://w3id.org/bot#Building> ;
+              <https://w3id.org/bot#hasStorey> :Storey1 ,
+                                               :Storey2 .
+
+
+###  http://example.org/bot_test#Room101
+:Room101 rdf:type owl:NamedIndividual ,
+                  <https://w3id.org/bot#Space> ;
+         <https://w3id.org/bot#adjacentElement> :door_101_102 ,
+                                                :door_entrance ,
+                                                :wall_101_102 ,
+                                                :wall_external_N ,
+                                                :wall_external_S ,
+                                                :wall_external_W ,
+                                                :window101 ;
+         <https://w3id.org/bot#containsElement> :table_101 .
+
+
+###  http://example.org/bot_test#Room102
+:Room102 rdf:type owl:NamedIndividual ,
+                  <https://w3id.org/bot#Space> ;
+         <https://w3id.org/bot#adjacentElement> :door_101_102 ,
+                                                :trapdoor_102_201 ,
+                                                :wall_101_102 ,
+                                                :wall_external_E ,
+                                                :wall_external_N ,
+                                                :wall_external_S ,
+                                                :window102 ;
+         <https://w3id.org/bot#containsElement> :sofa_102 .
+
+
+###  http://example.org/bot_test#Room201
+:Room201 rdf:type owl:NamedIndividual ,
+                  <https://w3id.org/bot#Space> ;
+         <https://w3id.org/bot#adjacentElement> :trapdoor_102_201 ,
+                                                :wall_external_E ,
+                                                :wall_external_N ,
+                                                :wall_external_S ,
+                                                :wall_external_W ,
+                                                :window201 .
+
+
+###  http://example.org/bot_test#Storey1
+:Storey1 rdf:type owl:NamedIndividual ,
+                  <https://w3id.org/bot#Storey> ;
+         <https://w3id.org/bot#hasSpace> :Room101 ,
+                                         :Room102 .
+
+
+###  http://example.org/bot_test#Storey2
+:Storey2 rdf:type owl:NamedIndividual ,
+                  <https://w3id.org/bot#Storey> ;
+         <https://w3id.org/bot#hasSpace> :Room201 .
+
+
+###  http://example.org/bot_test#door_101_102
+:door_101_102 rdf:type owl:NamedIndividual ,
+                       <https://w3id.org/bot#Element> .
+
+
+###  http://example.org/bot_test#door_entrance
+:door_entrance rdf:type owl:NamedIndividual ,
+                        <https://w3id.org/bot#Element> .
+
+
+###  http://example.org/bot_test#sofa_102
+:sofa_102 rdf:type owl:NamedIndividual ,
+                   <https://w3id.org/bot#Element> .
+
+
+###  http://example.org/bot_test#table_101
+:table_101 rdf:type owl:NamedIndividual ,
+                    <https://w3id.org/bot#Element> .
+
+
+###  http://example.org/bot_test#trapdoor_102_201
+:trapdoor_102_201 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/bot#Element> .
+
+
+###  http://example.org/bot_test#wall_101_102
+:wall_101_102 rdf:type owl:NamedIndividual ,
+                       <https://w3id.org/bot#Element> .
+
+
+###  http://example.org/bot_test#wall_external_E
+:wall_external_E rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/bot#Element> .
+
+
+###  http://example.org/bot_test#wall_external_N
+:wall_external_N rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/bot#Element> .
+
+
+###  http://example.org/bot_test#wall_external_S
+:wall_external_S rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/bot#Element> .
+
+
+###  http://example.org/bot_test#wall_external_W
+:wall_external_W rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/bot#Element> .
+
+
+###  http://example.org/bot_test#window101
+:window101 rdf:type owl:NamedIndividual ,
+                    <https://w3id.org/bot#Element> .
+
+
+###  http://example.org/bot_test#window102
+:window102 rdf:type owl:NamedIndividual ,
+                    <https://w3id.org/bot#Element> .
+
+
+###  http://example.org/bot_test#window201
+:window201 rdf:type owl:NamedIndividual ,
+                    <https://w3id.org/bot#Element> .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

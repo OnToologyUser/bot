@@ -1,0 +1,10 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "bot:Space" "bot:Storey" "bot:Building" "bot:Site" "bot:Zone" ; /*classes style*/
+	"bot:Site" -> "bot:Zone" [ label = "rdfs:subClassOf" ];
+	"bot:Space" -> "bot:Zone" [ label = "rdfs:subClassOf" ];
+	"bot:Storey" -> "bot:Zone" [ label = "rdfs:subClassOf" ];
+	"bot:Building" -> "bot:Zone" [ label = "rdfs:subClassOf" ];
+
+}

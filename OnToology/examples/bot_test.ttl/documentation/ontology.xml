@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/bot_test#"
+     xml:base="http://example.org/bot_test"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:bot="https://w3id.org/bot#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://example.org/bot_test">
+        <owl:imports rdf:resource="https://w3id.org/bot"/>
+        <ns:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example showing how the BOT ontology can be used to describe the topology of a building.
+The building has four external walls and consists of 2 storeys. In the first storey there are rooms 101 and 102. In the second storey there is room 201.
+Room 101 has an entrance door, one window and a table.
+Room 102 has a window and a sofa.
+A door connects room 101 and room 102.
+A trapdoor connects room 102 and room 201.</dc:description>
+        <terms:creator rdf:resource="http://www.terkaj.com#walter"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-04-05</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-04-05</terms:modified>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/bot_test#BuildingTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#BuildingTest">
+        <rdf:type rdf:resource="https://w3id.org/bot#Building"/>
+        <bot:hasStorey rdf:resource="http://example.org/bot_test#Storey1"/>
+        <bot:hasStorey rdf:resource="http://example.org/bot_test#Storey2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#Room101 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#Room101">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#door_101_102"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#door_entrance"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#wall_101_102"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#wall_external_N"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#wall_external_S"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#wall_external_W"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#window101"/>
+        <bot:containsElement rdf:resource="http://example.org/bot_test#table_101"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#Room102 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#Room102">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#door_101_102"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#trapdoor_102_201"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#wall_101_102"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#wall_external_E"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#wall_external_N"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#wall_external_S"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#window102"/>
+        <bot:containsElement rdf:resource="http://example.org/bot_test#sofa_102"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#Room201 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#Room201">
+        <rdf:type rdf:resource="https://w3id.org/bot#Space"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#trapdoor_102_201"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#wall_external_E"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#wall_external_N"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#wall_external_S"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#wall_external_W"/>
+        <bot:adjacentElement rdf:resource="http://example.org/bot_test#window201"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#Storey1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#Storey1">
+        <rdf:type rdf:resource="https://w3id.org/bot#Storey"/>
+        <bot:hasSpace rdf:resource="http://example.org/bot_test#Room101"/>
+        <bot:hasSpace rdf:resource="http://example.org/bot_test#Room102"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#Storey2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#Storey2">
+        <rdf:type rdf:resource="https://w3id.org/bot#Storey"/>
+        <bot:hasSpace rdf:resource="http://example.org/bot_test#Room201"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#door_101_102 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#door_101_102">
+        <rdf:type rdf:resource="https://w3id.org/bot#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#door_entrance -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#door_entrance">
+        <rdf:type rdf:resource="https://w3id.org/bot#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#sofa_102 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#sofa_102">
+        <rdf:type rdf:resource="https://w3id.org/bot#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#table_101 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#table_101">
+        <rdf:type rdf:resource="https://w3id.org/bot#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#trapdoor_102_201 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#trapdoor_102_201">
+        <rdf:type rdf:resource="https://w3id.org/bot#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#wall_101_102 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#wall_101_102">
+        <rdf:type rdf:resource="https://w3id.org/bot#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#wall_external_E -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#wall_external_E">
+        <rdf:type rdf:resource="https://w3id.org/bot#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#wall_external_N -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#wall_external_N">
+        <rdf:type rdf:resource="https://w3id.org/bot#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#wall_external_S -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#wall_external_S">
+        <rdf:type rdf:resource="https://w3id.org/bot#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#wall_external_W -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#wall_external_W">
+        <rdf:type rdf:resource="https://w3id.org/bot#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#window101 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#window101">
+        <rdf:type rdf:resource="https://w3id.org/bot#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#window102 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#window102">
+        <rdf:type rdf:resource="https://w3id.org/bot#Element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/bot_test#window201 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/bot_test#window201">
+        <rdf:type rdf:resource="https://w3id.org/bot#Element"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+
+

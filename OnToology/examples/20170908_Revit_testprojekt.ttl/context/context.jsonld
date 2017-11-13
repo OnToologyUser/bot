@@ -1,0 +1,25 @@
+{
+  "@context" : {
+    "hasSpace" : {
+      "@id" : "https://w3id.org/bot#hasSpace"
+    },
+    "adjacentElement" : {
+      "@id" : "https://w3id.org/bot#adjacentElement"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "guid" : {
+      "@id" : "https://eample.org/rvt#guid"
+    },
+    "Element" : {
+      "@id" : "https://w3id.org/bot#Element"
+    },
+    "Space" : {
+      "@id" : "https://w3id.org/bot#Space"
+    },
+    "Storey" : {
+      "@id" : "https://w3id.org/bot#Storey"
+    }
+  }
+}

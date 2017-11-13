@@ -1,0 +1,47 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "bot:Interface" "bot:Element" "bot:Space" "bot:Storey" "bot:Building" "bot:Site" "bot:Zone" ; /*classes style*/
+	"bot:containsElement" -> "-657e4a7f:15fb571ddc8:-7ffc" [ label = "owl:propertyChainAxiom" ];
+	"bot:hasStorey" -> "bot:containsZone" [ label = "rdfs:subPropertyOf" ];
+	"bot:hasBuilding" -> "bot:containsZone" [ label = "rdfs:subPropertyOf" ];
+	"bot:" -> "d4dbf3f00b2b426c51530e34bb9dd637" [ label = "dcterms:contributor" ];
+	"bot:" -> "95d097ffee84ed4f8a0257d9f421c2da" [ label = "dcterms:creator" ];
+	"bot:" -> "https://creativecommons.org/licenses/by/1.0/" [ label = "dcterms:license" ];
+	"bot:" -> "bot:" [ label = "vann:preferredNamespaceUri" ];
+	"bot:" -> "https://doi.org/10.24928/JC3-2017/0153" [ label = "rdfs:seeAlso" ];
+	"bot:" -> "10c9f271dd4a9753ecaf5ac48aa3293a" [ label = "dcterms:contributor" ];
+	"bot:" -> "https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology" [ label = "rdfs:seeAlso" ];
+	"bot:" -> "https://w3id.org/bot/0.1.1" [ label = "owl:priorVersion" ];
+	"bot:" -> "https://w3id.org/bot/0.2.0" [ label = "owl:versionIRI" ];
+	"bot:" -> "945187bc091ecc98d4f782a7e0357afe" [ label = "dcterms:creator" ];
+	"bot:hasSpace" -> "bot:containsZone" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "-657e4a7f:15fb571ddc8:-7ff7" [ label = "rdf:rest" ];
+	"NULL" -> "-657e4a7f:15fb571ddc8:-7ff5" [ label = "owl:members" ];
+	"NULL" -> "-657e4a7f:15fb571ddc8:-7ff4" [ label = "rdf:rest" ];
+	"NULL" -> "bot:containsElement" [ label = "rdf:first" ];
+	"NULL" -> "-657e4a7f:15fb571ddc8:-7ff6" [ label = "rdf:rest" ];
+	"NULL" -> "-657e4a7f:15fb571ddc8:-7ff9" [ label = "rdf:rest" ];
+	"NULL" -> "bot:Element" [ label = "rdf:first" ];
+	"NULL" -> "bot:Storey" [ label = "rdf:first" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "bot:Space" [ label = "rdf:first" ];
+	"NULL" -> "bot:Zone" [ label = "rdf:first" ];
+	"NULL" -> "bot:containsZone" [ label = "rdf:first" ];
+	"NULL" -> "-657e4a7f:15fb571ddc8:-7ff8" [ label = "rdf:rest" ];
+	"NULL" -> "-657e4a7f:15fb571ddc8:-7ffa" [ label = "owl:members" ];
+	"NULL" -> "bot:interfaceOf" [ label = "owl:onProperty" ];
+	"NULL" -> "bot:Site" [ label = "rdf:first" ];
+	"NULL" -> "-657e4a7f:15fb571ddc8:-7ffb" [ label = "rdf:rest" ];
+	"NULL" -> "bot:Building" [ label = "rdf:first" ];
+	"bot:Zone" -> "bot:Building" [ label = "bot:hasBuilding" ];
+	"bot:Zone" -> "bot:Storey" [ label = "bot:hasStorey" ];
+	"bot:Zone" -> "bot:Element" [ label = "bot:adjacentElement" ];
+	"bot:Zone" -> "bot:Zone" [ label = "bot:adjacentZone" ];
+	"bot:Zone" -> "bot:Space" [ label = "bot:hasSpace" ];
+	"bot:Zone" -> "bot:Element" [ label = "bot:containsElement" ];
+	"bot:Element" -> "bot:Element" [ label = "bot:hostsElement" ];
+	"bot:Interface" -> "owl:Thing" [ label = "bot:interfaceOf" ];
+	"bot:Zone" -> "bot:Zone" [ label = "bot:containsZone" ];
+
+}

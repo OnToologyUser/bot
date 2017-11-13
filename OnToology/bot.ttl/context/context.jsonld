@@ -1,0 +1,125 @@
+{
+  "@context" : {
+    "Space" : {
+      "@id" : "https://w3id.org/bot#Space"
+    },
+    "term_status" : {
+      "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "hasSpace" : {
+      "@id" : "https://w3id.org/bot#hasSpace",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "adjacentElement" : {
+      "@id" : "https://w3id.org/bot#adjacentElement",
+      "@type" : "@id"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
+    },
+    "adjacentZone" : {
+      "@id" : "https://w3id.org/bot#adjacentZone",
+      "@type" : "@id"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "priorVersion" : {
+      "@id" : "http://www.w3.org/2002/07/owl#priorVersion"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "hasBuilding" : {
+      "@id" : "https://w3id.org/bot#hasBuilding",
+      "@type" : "@id"
+    },
+    "Storey" : {
+      "@id" : "https://w3id.org/bot#Storey"
+    },
+    "Interface" : {
+      "@id" : "https://w3id.org/bot#Interface"
+    },
+    "Person" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "Building" : {
+      "@id" : "https://w3id.org/bot#Building"
+    },
+    "Zone" : {
+      "@id" : "https://w3id.org/bot#Zone"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "interfaceOf" : {
+      "@id" : "https://w3id.org/bot#interfaceOf",
+      "@type" : "@id"
+    },
+    "Vocabulary" : {
+      "@id" : "http://purl.org/vocommons/voaf#Vocabulary"
+    },
+    "Site" : {
+      "@id" : "https://w3id.org/bot#Site"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/elements/1.1/modified"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "aggregates" : {
+      "@id" : "https://w3id.org/bot#aggregates",
+      "@type" : "@id"
+    },
+    "Language" : {
+      "@id" : "http://purl.org/dc/elements/1.1/Language"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
+    },
+    "hostsElement" : {
+      "@id" : "https://w3id.org/bot#hostsElement",
+      "@type" : "@id"
+    },
+    "containsZone" : {
+      "@id" : "https://w3id.org/bot#containsZone",
+      "@type" : "@id"
+    },
+    "Element" : {
+      "@id" : "https://w3id.org/bot#Element"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "containsElement" : {
+      "@id" : "https://w3id.org/bot#containsElement",
+      "@type" : "@id"
+    },
+    "hasStorey" : {
+      "@id" : "https://w3id.org/bot#hasStorey",
+      "@type" : "@id"
+    }
+  }
+}

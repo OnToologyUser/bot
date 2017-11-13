@@ -1,0 +1,47 @@
+{
+  "@context" : {
+    "Space" : {
+      "@id" : "https://w3id.org/bot#Space"
+    },
+    "hasSpace" : {
+      "@id" : "https://w3id.org/bot#hasSpace",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://creativecommons.org/ns#license"
+    },
+    "adjacentElement" : {
+      "@id" : "https://w3id.org/bot#adjacentElement",
+      "@type" : "@id"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
+    },
+    "Storey" : {
+      "@id" : "https://w3id.org/bot#Storey"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "Building" : {
+      "@id" : "https://w3id.org/bot#Building"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "Element" : {
+      "@id" : "https://w3id.org/bot#Element"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "containsElement" : {
+      "@id" : "https://w3id.org/bot#containsElement",
+      "@type" : "@id"
+    },
+    "hasStorey" : {
+      "@id" : "https://w3id.org/bot#hasStorey",
+      "@type" : "@id"
+    }
+  }
+}

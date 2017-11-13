@@ -1,0 +1,35 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"bot_test:Room102" -> "bot_test:sofa_102" [ label = "bot:containsElement" ];
+	"bot_test:Room102" -> "bot_test:door_101_102" [ label = "bot:adjacentElement" ];
+	"bot_test:Room102" -> "bot_test:wall_external_E" [ label = "bot:adjacentElement" ];
+	"bot_test:Room102" -> "bot_test:window102" [ label = "bot:adjacentElement" ];
+	"bot_test:Room102" -> "bot_test:trapdoor_102_201" [ label = "bot:adjacentElement" ];
+	"bot_test:Room102" -> "bot_test:wall_external_S" [ label = "bot:adjacentElement" ];
+	"bot_test:Room102" -> "bot_test:wall_101_102" [ label = "bot:adjacentElement" ];
+	"bot_test:Room102" -> "bot_test:wall_external_N" [ label = "bot:adjacentElement" ];
+	"bot_test:BuildingTest" -> "bot_test:Storey2" [ label = "bot:hasStorey" ];
+	"bot_test:BuildingTest" -> "bot_test:Storey1" [ label = "bot:hasStorey" ];
+	"http://example.org/bot_test" -> "http://creativecommons.org/licenses/by/3.0/" [ label = "cc:license" ];
+	"http://example.org/bot_test" -> "http://www.terkaj.com#walter" [ label = "dc:creator" ];
+	"http://example.org/bot_test" -> "https://w3id.org/bot" [ label = "owl:imports" ];
+	"bot_test:Storey2" -> "bot_test:Room201" [ label = "bot:hasSpace" ];
+	"bot_test:Room201" -> "bot_test:window201" [ label = "bot:adjacentElement" ];
+	"bot_test:Room201" -> "bot_test:wall_external_W" [ label = "bot:adjacentElement" ];
+	"bot_test:Room201" -> "bot_test:wall_external_S" [ label = "bot:adjacentElement" ];
+	"bot_test:Room201" -> "bot_test:wall_external_N" [ label = "bot:adjacentElement" ];
+	"bot_test:Room201" -> "bot_test:wall_external_E" [ label = "bot:adjacentElement" ];
+	"bot_test:Room201" -> "bot_test:trapdoor_102_201" [ label = "bot:adjacentElement" ];
+	"bot_test:Room101" -> "bot_test:wall_external_N" [ label = "bot:adjacentElement" ];
+	"bot_test:Room101" -> "bot_test:door_101_102" [ label = "bot:adjacentElement" ];
+	"bot_test:Room101" -> "bot_test:door_entrance" [ label = "bot:adjacentElement" ];
+	"bot_test:Room101" -> "bot_test:wall_101_102" [ label = "bot:adjacentElement" ];
+	"bot_test:Room101" -> "bot_test:wall_external_S" [ label = "bot:adjacentElement" ];
+	"bot_test:Room101" -> "bot_test:window101" [ label = "bot:adjacentElement" ];
+	"bot_test:Room101" -> "bot_test:table_101" [ label = "bot:containsElement" ];
+	"bot_test:Room101" -> "bot_test:wall_external_W" [ label = "bot:adjacentElement" ];
+	"bot_test:Storey1" -> "bot_test:Room102" [ label = "bot:hasSpace" ];
+	"bot_test:Storey1" -> "bot_test:Room101" [ label = "bot:hasSpace" ];
+
+}
